@@ -538,3 +538,316 @@ body {
         font-size: 14px;
     }
 }
+
+.episodes-section {
+    background: transparent;
+}
+
+.episodes-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.episode-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.episode-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.episode-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff4d8d 0%, #a855f7 50%, #ffd700 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 77, 141, 0.4);
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 12px 30px rgba(255, 77, 141, 0.6);
+}
+
+.episode-content {
+    padding: 24px;
+}
+
+.episode-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.episode-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+.episode-duration {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #00ff88;
+}
+
+.duration-icon {
+    flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+    .episodes-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    
+    .episodes-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .episode-image-wrapper {
+        height: 200px;
+    }
+    
+    .episode-title {
+        font-size: 18px;
+    }
+    
+    .episode-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .episodes-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+    
+    .episodes-grid {
+        gap: 20px;
+    }
+    
+    .episode-image-wrapper {
+        height: 180px;
+    }
+    
+    .episode-content {
+        padding: 20px;
+    }
+    
+    .play-button {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .play-button svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .episode-title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    
+    .episode-description {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+}
+
+.host-section {
+    background: transparent;
+}
+
+.host-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.host-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.host-image-wrapper {
+    flex-shrink: 0;
+}
+
+.host-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.host-info {
+    flex: 1;
+}
+
+.host-name {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.host-bio {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+.host-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(168, 85, 247, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, #ff4d8d, #a855f7);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.4);
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 992px) {
+    .host-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    
+    .host-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+        gap: 40px;
+    }
+    
+    .host-image {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .host-name {
+        font-size: 32px;
+    }
+    
+    .host-bio {
+        font-size: 15px;
+    }
+    
+    .host-socials {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .host-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+    
+    .host-card {
+        padding: 32px 24px;
+        gap: 32px;
+    }
+    
+    .host-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .host-name {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+    
+    .host-bio {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+    
+    .social-icon {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
