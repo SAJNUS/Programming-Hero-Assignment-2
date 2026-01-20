@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +9,16 @@ body {
     background: linear-gradient(135deg, #1a0d2e 0%, #2d1b4e 50%, #1a0d2e 100%);
     min-height: 100vh;
     color: white;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
-/* Gradient Text for Logo */
+.container-1600 {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .gradient-text {
     background: linear-gradient(90deg, #ff4d8d 0%, #a855f7 100%);
     -webkit-background-clip: text;
@@ -20,7 +26,6 @@ body {
     background-clip: text;
 }
 
-/* Navigation Link Styles */
 .nav-link {
     position: relative;
     transition: color 0.3s ease;
@@ -46,7 +51,6 @@ body {
     width: 100%;
 }
 
-/* Gradient Button */
 .gradient-button {
     background: linear-gradient(90deg, #ff4d8d 0%, #a855f7 100%);
     color: white;
@@ -61,7 +65,187 @@ body {
     box-shadow: 0 10px 25px rgba(255, 77, 141, 0.4);
 }
 
-/* Responsive Adjustments */
+.hero-section {
+    position: relative;
+    background-image: url('assets/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 760px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.podcast-circle-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-circle {
+    width: 350px;
+    height: 350px;
+    display: block;
+}
+
+.microphone-icon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.new-badge {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: linear-gradient(90deg, #00ff88, #00d4aa);
+    color: #1a0d2e;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 25px;
+}
+
+.waveform-left,
+.waveform-right {
+    width: 400px;
+    height: 150px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150"><path d="M 0 75 Q 20 20, 40 75 T 80 75 Q 100 120, 120 75 T 160 75 Q 180 30, 200 75 T 240 75 Q 260 110, 280 75 T 320 75 Q 340 40, 360 75 T 400 75" stroke="%23ff4d8d" stroke-width="2" fill="none" opacity="0.8"/></svg>') center/contain no-repeat;
+}
+
+.waveform-right {
+    transform: scaleX(-1);
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.spotify-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #ff4d8d 0%, #a855f7 50%, #ffd700 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotify-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 77, 141, 0.4);
+}
+
+.subscribe-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: #00ff88;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 30px;
+    border: 2px solid #00ff88;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background: #00ff88;
+    color: #1a0d2e;
+    transform: translateY(-2px);
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 992px) {
+    .waveform-left,
+    .waveform-right {
+        display: none;
+    }
+    
+    .hero-section {
+        height: auto;
+        padding: 60px 20px;
+    }
+    
+    .hero-circle {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .microphone-icon {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .spotify-button,
+    .subscribe-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 576px) {
     body {
         background: linear-gradient(135deg, #1a0d2e 0%, #2d1b4e 100%);
