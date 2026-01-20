@@ -1,0 +1,69 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a0d2e 0%, #2d1b4e 50%, #1a0d2e 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+/* Gradient Text for Logo */
+.gradient-text {
+    background: linear-gradient(90deg, #ff4d8d 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Navigation Link Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #ff4d8d;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #ff4d8d 0%, #a855f7 100%);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Gradient Button */
+.gradient-button {
+    background: linear-gradient(90deg, #ff4d8d 0%, #a855f7 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+}
+
+.gradient-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 77, 141, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    body {
+        background: linear-gradient(135deg, #1a0d2e 0%, #2d1b4e 100%);
+    }
+}
