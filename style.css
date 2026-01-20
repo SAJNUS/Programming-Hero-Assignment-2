@@ -160,8 +160,8 @@ body {
 
 .microphone-icon {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -289,13 +289,13 @@ body {
     }
     
     .hero-circle {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
     
     .microphone-icon {
-        width: 140px;
-        height: 140px;
+        width: 90px;
+        height: 90px;
     }
     
     .new-badge {
