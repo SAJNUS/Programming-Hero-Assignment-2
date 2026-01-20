@@ -965,12 +965,15 @@ body {
     }
     
     .footer-platforms {
-        gap: 24px;
+        gap: 16px 24px;
+        width: 100%;
     }
     
     .platform-link {
         font-size: 14px;
         gap: 10px;
+        flex-basis: calc(50% - 12px);
+        justify-content: center;
     }
     
     .platform-icon {
